@@ -1,12 +1,14 @@
 <?php
 
-namespace App;
+namespace App\Models;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
 {
+    const USER = 0;
+    const ADMIN = 10;
     use Notifiable;
 
     /**
@@ -24,6 +26,14 @@ class User extends Authenticatable
      * @var array
      */
     protected $hidden = [
-        'password', 'remember_token',
+        'password'
     ];
+
+    public function hasAdmin()
+    {
+        if($this->role == self::ADMIN)
+            return true;
+        return false;
+    }
+
 }
