@@ -6,7 +6,7 @@
 @if(Auth::check()&& Auth::user()->hasAdmin())
     <div>
     {!! Form::open(['url' => 'comment/'.$comment->id,'method' => 'delete']) !!}
-    {!! Form::submit('delete',["class"=>"btn btn-xs btn-danger"]) !!}
+    {!! Form::submit('delete',["class"=>"btn btn-xs btn-danger" , "data-toggle"=>"confirmation" ]) !!}
     {!! Form::close() !!}
     </div>
 @endif

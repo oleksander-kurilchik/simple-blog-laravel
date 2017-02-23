@@ -14,9 +14,8 @@ return [
     'next' => 'Next &raquo;',
     'logout' => "Вихід",
     'created_by' => 'Створено',
-    'created_at' => 'Створенно користувачом'
-  ,
-  'read_more' => "Читати далі"
+    'created_at' => 'Створенно користувачом'  ,
+    'read_more' => "Читати далі"
 
 
 ];

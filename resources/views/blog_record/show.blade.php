@@ -11,7 +11,7 @@
         @if(Auth::check()&& Auth::user()->hasAdmin())
             <div>
                 {!! Form::open(['url' => 'blog/'.$blog->id,'method' => 'delete' , "style"=>"display: inline-block;"]) !!}
-                {!! Form::submit('delete',["class"=>"btn btn-sm btn-danger"]) !!}
+                {!! Form::submit('delete',["class"=>"btn btn-sm btn-danger" , "data-toggle"=>"confirmation" ]) !!}
                 {!! Form::close() !!}
                 {!! Form::open(['url' => 'blog/'.$blog->id."/edit",'method' => 'get',"style"=>"display: inline-block;"]) !!}
                 {!! Form::submit('Edit',["class"=>"btn btn-sm btn-success "]) !!}
